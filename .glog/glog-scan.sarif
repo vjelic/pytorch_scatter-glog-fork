@@ -10,7 +10,56 @@
           "version": "1.0.0",
           "semanticVersion": "1.0.0",
           "informationUri": "https://www.glog.ai",
-          "rules": [],
+          "rules": [
+            {
+              "id": "6880b389-4f9f-33a0-aa9b-8d397f282a27",
+              "name": "resources.rules.raptor-suspicious-assert",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-suspicious-assert"
+              },
+              "fullDescription": {
+                "text": "Most codebases define assertion macros which compile to a no-op on non-debug builds. If assertions are the only line of defense against untrusted input, the software may be exposed to attacks that leverage the lack of proper input checks."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Most codebases define assertion macros which compile to a no-op on non-debug builds. If assertions are the only line of defense against untrusted input, the software may be exposed to attacks that leverage the lack of proper input checks.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Most codebases define assertion macros which compile to a no-op on non-debug builds. If assertions are the only line of defense against untrusted input, the software may be exposed to attacks that leverage the lack of proper input checks.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://legends2k.github.io/note/assert_vs_if/](https://legends2k.github.io/note/assert_vs_if/)\n - [https://github.com/struct/mms](https://github.com/struct/mms)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-suspicious-assert"
+                ]
+              }
+            },
+            {
+              "id": "efa533e9-032d-3db5-b5c1-946409e254aa",
+              "name": "resources.rules.raptor-suspicious-assert",
+              "shortDescription": {
+                "text": "Opengrep Finding: resources.rules.raptor-suspicious-assert"
+              },
+              "fullDescription": {
+                "text": "Most codebases define assertion macros which compile to a no-op on non-debug builds. If assertions are the only line of defense against untrusted input, the software may be exposed to attacks that leverage the lack of proper input checks."
+              },
+              "defaultConfiguration": {
+                "enabled": true,
+                "level": "warning"
+              },
+              "help": {
+                "text": "Most codebases define assertion macros which compile to a no-op on non-debug builds. If assertions are the only line of defense against untrusted input, the software may be exposed to attacks that leverage the lack of proper input checks.\n💎 Enable cross-file analysis and Pro rules for free at sg.run/pro",
+                "markdown": "Most codebases define assertion macros which compile to a no-op on non-debug builds. If assertions are the only line of defense against untrusted input, the software may be exposed to attacks that leverage the lack of proper input checks.\n\n#### 💎 Enable cross-file analysis and Pro rules for free at <a href='https://sg.run/pro'>sg.run/pro</a>\n\n<b>References:</b>\n - [https://legends2k.github.io/note/assert_vs_if/](https://legends2k.github.io/note/assert_vs_if/)\n - [https://github.com/struct/mms](https://github.com/struct/mms)\n"
+              },
+              "properties": {
+                "precision": "very-high",
+                "tags": [
+                  "resources.rules.raptor-suspicious-assert"
+                ]
+              }
+            }
+          ],
           "language": "en-US",
           "contents": [
             "localizedData",
@@ -20,7 +69,39 @@
         }
       },
       "language": "en-US",
-      "results": [],
+      "results": [
+        {
+          "ruleId": "efa533e9-032d-3db5-b5c1-946409e254aa",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Most codebases define assertion macros which compile to a no-op on non-debug builds. If assertions are the only line of defense against untrusted input, the software may be exposed to attacks that leverage the lack of proper input checks."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "csrc/cpu/segment_coo_cpu.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 111,
+                  "startColumn": 13,
+                  "endLine": 111,
+                  "endColumn": 36,
+                  "snippet": {
+                    "text": "            assert(idx <= next_idx);"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "007a7d36e5dad51166ff3b786f82ce5ec545b7da513aba9ed970ae9ab848fae66fa877a38b98b92622b62f577b3060425cfb2bcd6c0fca6a2b4b10d6a7023b74_0"
+          },
+          "properties": {}
+        }
+      ],
       "newlineSequences": [
         "\r\n",
         "\n"
