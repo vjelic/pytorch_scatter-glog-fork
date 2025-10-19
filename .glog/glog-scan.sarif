@@ -71,6 +71,37 @@
       "language": "en-US",
       "results": [
         {
+          "ruleId": "6880b389-4f9f-33a0-aa9b-8d397f282a27",
+          "kind": "fail",
+          "level": "warning",
+          "message": {
+            "text": "Most codebases define assertion macros which compile to a no-op on non-debug builds. If assertions are the only line of defense against untrusted input, the software may be exposed to attacks that leverage the lack of proper input checks."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "csrc/cpu/index_info.h",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 5,
+                  "endLine": 12,
+                  "endColumn": 42,
+                  "snippet": {
+                    "text": "    AT_ASSERT(dims < MAX_TENSORINFO_DIMS);"
+                  }
+                }
+              }
+            }
+          ],
+          "fingerprints": {
+            "matchBasedId/v1": "ad28f65a22c42de99c2477acb5c6caaf7c21ca1795fbd70cf4f3fb7f943e2c9fe9626c3d04a6449a4113420fa27ba3fbac80c8c692c011f1c8e587faa4e448a9_0"
+          },
+          "properties": {}
+        },
+        {
           "ruleId": "efa533e9-032d-3db5-b5c1-946409e254aa",
           "kind": "fail",
           "level": "warning",
